@@ -1,0 +1,88 @@
+Replace the current Hero section background with the NASA 
+"Earth at Night" satellite image. Here are the exact steps:
+
+1. IMAGE SETUP
+Save the NASA Earth at Night image into the project at:
+public/images/earth-night.jpg
+
+If you cannot save it directly, use this NASA public domain 
+image URL as the src (it is free for commercial use):
+https://eoimages.gsfc.nasa.gov/images/imagerecords/79000/79765/dnb_land_ocean_ice.2012.3600x1800.jpg
+
+2. HERO BACKGROUND IMPLEMENTATION
+In the Hero section component, replace the existing background 
+(canvas, blob shapes, or plain dark color) with this:
+
+<div className="absolute inset-0 w-full h-full overflow-hidden">
+  
+  {/* Base image */}
+  <img
+    src="/images/earth-night.jpg"
+    alt=""
+    aria-hidden="true"
+    className="absolute inset-0 w-full h-full"
+    style={{
+      objectFit: "cover",
+      objectPosition: "28% center",
+      transform: "scale(1.05)",
+      filter: "brightness(0.9) saturate(1.2) sepia(0.15) 
+               hue-rotate(5deg)",
+    }}
+  />
+
+  {/* Dark overlay — keeps text readable */}
+  <div
+    className="absolute inset-0"
+    style={{
+      background: `
+        linear-gradient(
+          to bottom,
+          rgba(10, 10, 15, 0.55) 0%,
+          rgba(10, 10, 15, 0.45) 40%,
+          rgba(10, 10, 15, 0.65) 100%
+        )
+      `,
+    }}
+  />
+
+  {/* Gold tint overlay — ties image to brand palette */}
+  <div
+    className="absolute inset-0"
+    style={{
+      background: "rgba(200, 169, 110, 0.06)",
+      mixBlendMode: "screen",
+    }}
+  />
+
+  {/* Bottom fade — smooth transition into stats bar below */}
+  <div
+    className="absolute bottom-0 left-0 right-0"
+    style={{
+      height: "180px",
+      background: "linear-gradient(to bottom, transparent, #0A0A0F)",
+    }}
+  />
+
+</div>
+
+3. ENSURE HERO CONTENT STAYS ON TOP
+Make sure the Hero text content div has:
+className="relative z-10"
+
+So it renders above the background layers.
+
+4. DO NOT CHANGE
+- Hero headline, subheadline, or any copy
+- CTA buttons
+- Trust badges
+- Navigation
+- Any other section on the page
+
+5. RESULT TO VERIFY
+After implementation the Hero should show:
+- Earth at night satellite image as background
+- USA/North America visible and prominent on the left-center
+- Image dark enough that white and gold headline text 
+  reads clearly
+- Smooth fade at the bottom into the dark stats bar
+- No blob shapes, no canvas animation, no plain dark background

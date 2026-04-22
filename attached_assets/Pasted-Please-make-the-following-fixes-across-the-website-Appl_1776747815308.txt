@@ -1,0 +1,157 @@
+Please make the following fixes across the website. 
+Apply all changes carefully without breaking any existing functionality.
+
+═══════════════════════════════════════════════
+FIX 1 — HERO BACKGROUND
+═══════════════════════════════════════════════
+
+Replace the current blurred background in the Hero section with 
+a premium animated dark USA night map visualization.
+
+Implementation:
+- Create an HTML5 Canvas or SVG-based animated background
+- Base: Deep dark background #0A0A0F
+- Draw a simplified USA map outline/silhouette in very dark 
+  navy #0D1B2A as the landmass base
+- Add glowing gold dots (#C8A96E with 60% opacity) at 15–20 
+  major US city positions (approximate coordinates are fine):
+  New York, Los Angeles, Chicago, Houston, Phoenix, Philadelphia,
+  San Antonio, Dallas, Austin, Jacksonville, Columbus, Charlotte,
+  Indianapolis, Seattle, Denver, Boston, Nashville, Miami, Atlanta, 
+  Las Vegas
+- Draw thin animated connecting lines between these city dots 
+  in gold (#C8A96E, 20–30% opacity, 0.5px stroke)
+- Lines should have a pulse/flow animation — a brighter gold 
+  dot travels along each line repeatedly, like data flowing 
+  across a network
+- City dots should have a soft outer glow pulse animation 
+  (scale 1 → 1.3 → 1, repeat, staggered per city)
+- Overall brightness of the background should be LOW — 
+  this is a background, not the focus. Hero text must remain 
+  the most prominent element
+- Add a dark radial gradient overlay on top of the canvas: 
+  center transparent, edges darkening to #0A0A0F — this 
+  vignettes the map and keeps text readable
+- The animation should be smooth, subtle, and continuous — 
+  not distracting
+
+The result should feel like a live intelligence/data network 
+map of the United States — premium, dark, and purposeful.
+
+═══════════════════════════════════════════════
+FIX 2 — SERVICE CARD ICON BACKGROUNDS
+═══════════════════════════════════════════════
+
+In the "What We Offer" services grid section, make all three 
+service card icon backgrounds consistent.
+
+Current issue: Real Estate has warm beige, Specialty has blue, 
+Cold Calling has beige — inconsistent.
+
+Fix: Set ALL three icon container backgrounds to the same style:
+- Background color: rgba(200, 169, 110, 0.12) — subtle gold tint
+- Border: 1px solid rgba(200, 169, 110, 0.25)
+- Border radius: 10px
+- Icon color: #C8A96E (gold)
+- Size: consistent across all three
+
+Do not change anything else about the service cards.
+
+═══════════════════════════════════════════════
+FIX 3 — LEAD TYPE CARDS PADDING
+═══════════════════════════════════════════════
+
+In the "Real Estate Lead Types" grid section, increase the 
+internal padding of each lead type card.
+
+Current: Cards feel cramped vertically.
+
+Fix:
+- Increase card padding from current value to 28px on all sides
+- Increase the gap between the icon and the card title to 14px
+- Increase the gap between the title and description text to 10px
+- Increase the gap between description and "Learn More" link to 16px
+
+This should make each card feel more spacious and premium 
+without changing the 5×2 grid layout.
+
+═══════════════════════════════════════════════
+FIX 4 — ROI CALCULATOR EMPTY STATE
+═══════════════════════════════════════════════
+
+In the ROI Calculator section, fix the "Estimated ROI" 
+empty state display.
+
+Current issue: When "Cost per Lead" field is empty, 
+Estimated ROI shows a dash "—" which looks broken.
+
+Fix:
+- When Cost per Lead field is empty or zero, replace the 
+  dash with this text:
+  "Enter your quoted price to calculate"
+- Style: italic, font-size 13px, color #6B7280 (muted gray)
+- The text should wrap within the Estimated ROI cell cleanly
+- When the user enters a valid Cost per Lead value, 
+  the calculated ROI percentage should appear as normal 
+  in gold color #C8A96E
+
+Do not change any other calculator behavior.
+
+═══════════════════════════════════════════════
+FIX 5 — NATIONWIDE COVERAGE MAP
+═══════════════════════════════════════════════
+
+Two changes to the Nationwide Coverage map section:
+
+A) SCALE UP THE MAP
+- Increase the map SVG viewBox or transform scale by 15–20%
+  so the US map fills more of the dark container card
+- Reduce excess empty dark space especially at the bottom 
+  of the container
+- Keep the container card the same size — just make the 
+  map bigger within it
+
+B) LIGHTER COLOR SCHEME FOR THE MAP
+Change the map color palette to a lighter, more visible 
+intelligence-dashboard style:
+
+- Default state fill: #1E3A5F (slate blue — visible, not too dark)
+- Default state stroke: #2D5A8E (slightly lighter blue border)
+- Stroke width: 0.8px
+- Container background: #0D1B2A (dark navy — not black)
+- On hover: state fill changes to #C8A96E (gold) — keep as is
+- Tooltip style: keep existing dark card with state name 
+  and "Coverage Available" text — keep as is
+- Legend: update swatch colors to match new defaults
+
+The result should look like a professional geopolitical 
+intelligence map — slate blue states on dark navy, 
+gold on hover.
+
+═══════════════════════════════════════════════
+FIX 6 — FOOTER COPYRIGHT YEAR
+═══════════════════════════════════════════════
+
+In the footer bottom bar, update the copyright year:
+
+Change: © 2025 [BRAND_NAME]. All rights reserved.
+To:     © 2026 [BRAND_NAME]. All rights reserved.
+
+That's the only change needed in the footer.
+
+═══════════════════════════════════════════════
+IMPORTANT INSTRUCTIONS
+═══════════════════════════════════════════════
+
+- Apply ALL six fixes in one pass
+- Do NOT change anything not mentioned above
+- Do NOT modify any page routing or navigation
+- Do NOT touch the testimonials section 
+  ([BRAND_NAME] placeholder stays until brand is finalised)
+- After changes, verify:
+  ✓ Hero animation runs smoothly and text remains readable
+  ✓ All three service icons look identical in style
+  ✓ Lead type cards have more breathing room
+  ✓ ROI empty state shows italic muted text not a dash
+  ✓ Map is larger and lighter blue
+  ✓ Footer shows 2026

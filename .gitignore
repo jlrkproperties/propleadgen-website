@@ -1,0 +1,233 @@
+# =============================================================================
+# JLRK Properties — Monorepo .gitignore
+# Stack: Next.js · Vite · TypeScript · pnpm workspaces · Supabase · Vercel
+# =============================================================================
+
+# =============================================================================
+# DEPENDENCIES
+# =============================================================================
+node_modules/
+.pnpm-store/
+.pnpm/
+jspm_packages/
+bower_components/
+
+# =============================================================================
+# BUILD OUTPUTS
+# =============================================================================
+dist/
+build/
+out/
+.output/
+.nuxt/
+
+# Next.js
+.next/
+next-out/
+
+# Vite (jlrk-website uses vite.config.ts)
+vite.config.ts.timestamp-*
+
+# TypeScript compiled output
+*.js.map
+*.d.ts.map
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# =============================================================================
+# ENVIRONMENT VARIABLES — NEVER COMMIT
+# =============================================================================
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+.env.staging
+.env.*.local
+
+# =============================================================================
+# REPLIT-SPECIFIC
+# =============================================================================
+.replit
+replit.nix
+.replit-artifact/
+**/.replit-artifact/
+.upm/
+.config/
+replit_zip_error_log.txt
+.cache/
+.pythonlibs/
+
+# Replit mockup sandbox — not part of deployment
+artifacts/mockup-sandb*/
+
+# =============================================================================
+# VERCEL
+# =============================================================================
+.vercel
+.vercel/
+
+# =============================================================================
+# SUPABASE
+# =============================================================================
+.supabase/
+supabase/.temp/
+supabase/functions/.env
+
+# =============================================================================
+# LOGS
+# =============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.npm/
+
+# =============================================================================
+# TESTING
+# =============================================================================
+coverage/
+*.lcov
+.nyc_output/
+test-results/
+playwright-report/
+playwright/.cache/
+
+# =============================================================================
+# OS FILES
+# =============================================================================
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+Icon?
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# EDITORS & IDEs
+# =============================================================================
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains (WebStorm, IntelliJ)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+.idea_modules/
+
+# Vim / Neovim
+*.swp
+*.swo
+*~
+Session.vim
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# =============================================================================
+# PACKAGE MANAGER — KEEP LOCKFILE, IGNORE CACHES
+# =============================================================================
+
+# Keep these (do NOT ignore):
+# pnpm-lock.yaml        ← Vercel needs this for reproducible installs
+# pnpm-workspace.yaml   ← defines monorepo structure
+
+# Ignore caches only
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.npm
+.eslintcache
+.stylelintcache
+.prettiercache
+
+# =============================================================================
+# MISC GENERATED FILES
+# =============================================================================
+
+# next-sitemap output (regenerated on build)
+public/sitemap*.xml
+public/robots.txt
+
+# Storybook
+storybook-static/
+
+# Turbo
+.turbo/
+
+# SWC
+.swc/
+
+# Parcel
+.parcel-cache/
+
+# Rollup
+.rollup.cache
+
+# =============================================================================
+# SENSITIVE / SECRETS
+# =============================================================================
+
+# Private keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Certificates
+*.crt
+*.cer
+
+# AWS
+.aws/credentials
+
+# =============================================================================
+# WHAT THIS REPO INTENTIONALLY KEEPS (DO NOT ADD BELOW)
+# =============================================================================
+# pnpm-lock.yaml
+# pnpm-workspace.yaml
+# tsconfig.base.json
+# All source files under src/
+# All lib/ packages
+# scripts/
+# public/ assets (except generated sitemap/robots)
+# =============================================================================

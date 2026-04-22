@@ -1,0 +1,606 @@
+# Master Replit Prompt — Premium Lead Generation Website
+
+---
+
+## Project Overview
+
+Build a **premium, modern, full-featured marketing website** for a US-focused lead generation and data services company. The business offers three core services:
+
+1. **Real Estate Leads** — Probate, Pre-Probate, Divorce, Eviction, Inheritance, Judgment, Tax Delinquent, Fix & Flip, Distressed Homeowners, Aged Homeowners
+2. **Non Real Estate Leads** — Insurance, Mortgage, Refinance, Property Management, Private Lenders, Title Research, Property Analysis, Custom Home Builders
+3. **Cold Calling Services** — For Real Estate Agents, Investors & Wholesalers, Cash Buyers, Property Management Companies, Insurance Companies
+
+**Target audience:** US-based real estate investors, wholesalers, agents, insurance companies, mortgage brokers.
+
+**Brand placeholder:** Use `[BRAND_NAME]` throughout — replace when finalised.
+
+**Core positioning:** Quality Over Quantity. Manual verification. No bots, no AI, no recycled lists. Fresh data from official US county/government sources. Delivered in 2–4 days.
+
+---
+
+## Tech Stack
+
+- **React + Vite** — fast, modern frontend
+- **Tailwind CSS** — utility-first styling
+- **Framer Motion** — scroll animations, counter animations, page transitions
+- **React Router** — multi-page routing
+- **React Leaflet or SVG-based US Map** — interactive coverage map
+- **EmailJS or Formspree** — contact/order forms (no backend required)
+- **React Icons** — icon library (use WhatsApp, phone, mail, check icons)
+
+---
+
+## Visual Identity & Design Direction
+
+### Theme
+- **Dark, high-contrast, premium** — think intelligence firm, not a freelancer website
+- Dark backgrounds (`#0A0A0F`, `#0F1117`) for Hero, Stats, Footer sections
+- Light/white (`#FFFFFF`, `#F8F9FA`) for content sections — sandwich structure
+- This contrast creates a premium, editorial feel
+
+### Color Palette
+```
+Primary Dark:     #0A0A0F
+Secondary Dark:   #0F1117
+Card Background:  #13151C
+Border/Subtle:    #1E2130
+Accent Primary:   #C8A96E  (gold — authority, premium)
+Accent Secondary: #4A9EFF  (electric blue — trust, data)
+Text Primary:     #FFFFFF
+Text Secondary:   #9CA3AF
+Text Muted:       #6B7280
+Success Green:    #22C55E
+WhatsApp Green:   #25D366
+```
+
+### Typography
+- **Display/Hero font:** `Playfair Display` (Google Fonts) — authoritative, premium
+- **Body font:** `DM Sans` (Google Fonts) — clean, modern, readable
+- **Mono/data font:** `JetBrains Mono` — for stats, numbers, data callouts
+
+### Sizing
+- Hero title: 64px–80px, bold
+- Section titles: 40px–48px
+- Card headers: 20px–24px
+- Body: 16px–18px
+- Captions: 13px–14px
+
+### Motion & Animations
+- Smooth scroll-triggered fade-in for all sections (Framer Motion `whileInView`)
+- Staggered card reveals — cards animate in one by one, not all at once
+- Animated number counters in Stats Bar (count up from 0 on scroll into view)
+- Subtle floating/pulse animation on WhatsApp button
+- Hover states on all cards — slight lift with gold border glow
+- Page transitions — smooth fade between routes
+
+### Visual Motif
+- Thin gold (`#C8A96E`) accent lines and borders — consistent across all sections
+- Subtle grid/dot pattern as background texture on dark sections
+- Rounded corners (`border-radius: 12px`) on all cards
+- No decorative full-width colored bars or AI-slop header stripes
+
+---
+
+## Site Architecture — Pages & Routes
+
+```
+/                          → Home
+/real-estate-leads         → Real Estate Leads Hub
+/real-estate-leads/probate              → Probate Leads
+/real-estate-leads/pre-probate          → Pre-Probate Leads
+/real-estate-leads/divorce              → Divorce Leads
+/real-estate-leads/eviction             → Eviction Leads
+/real-estate-leads/inheritance          → Inheritance Leads
+/real-estate-leads/judgment             → Judgment Leads
+/real-estate-leads/tax-delinquent       → Tax Delinquent Leads
+/real-estate-leads/fix-and-flip         → Fix & Flip Properties
+/real-estate-leads/distressed-homeowners → Distressed Homeowners
+/real-estate-leads/aged-homeowners      → Aged Homeowners
+/non-real-estate-leads     → Non Real Estate Leads
+/cold-calling              → Cold Calling Services
+/pricing                   → Pricing
+/about                     → About Us
+/faq                       → FAQ
+/contact                   → Contact / Order
+```
+
+---
+
+## Navigation (Sticky Header)
+
+- Logo left (`[BRAND_NAME]` in Playfair Display, gold color)
+- Nav links center: Home, Services (dropdown), About, FAQ, Contact
+- Services dropdown shows: Real Estate Leads, Non Real Estate Leads, Cold Calling
+- CTA button right: "Get Started" — gold background, dark text
+- On scroll: header background darkens with subtle blur (glassmorphism effect)
+- Mobile: hamburger menu with full-screen overlay nav
+
+---
+
+## Homepage — Section by Section
+
+### 1. Hero Section (Dark Background)
+
+**Layout:** Full viewport height, centered content with subtle animated background
+
+**Background:** Dark (`#0A0A0F`) with subtle animated dot grid pattern and a very faint US map outline watermark
+
+**Content:**
+```
+Eyebrow text (small caps, gold):  VERIFIED · FRESH · RESULTS-DRIVEN
+H1:  Find Motivated Sellers
+     Before Anyone Else Does.
+Subheadline: We source, verify, and deliver targeted lead lists straight from 
+             US county records — manually checked, skip-traced, and ready to close.
+CTA Row:
+  → [Order Now]          (gold filled button)
+  → [Request Free Sample] (outlined button)
+  → [Chat on WhatsApp]   (WhatsApp green icon + text)
+Trust badges row below CTAs:
+  ✓ No AI · No Bots    ✓ Manual Verification    ✓ Fresh County Data    ✓ 2–4 Day Delivery
+```
+
+---
+
+### 2. Animated Stats Bar (Dark Background)
+
+Four stats in a horizontal row, animated count-up on scroll:
+
+```
+10,000+          500+           10+           48
+Leads Delivered  Happy Clients  Years Exp.    States Covered
+```
+
+Thin gold dividers between each stat. Numbers in large Playfair Display, labels in DM Sans muted.
+
+---
+
+### 3. Services Grid (Light Background)
+
+**Section title:** What We Offer
+
+Three large service cards in a row:
+
+**Card 1 — Real Estate Leads**
+- Icon: building/property icon (gold)
+- Title: Real Estate Leads
+- Description: Probate, divorce, eviction, inheritance and more — sourced from official county records across the US.
+- CTA: Explore Lead Types →
+
+**Card 2 — Non Real Estate Leads**
+- Icon: briefcase/chart icon (blue)
+- Title: Non Real Estate Leads
+- Description: Insurance, mortgage, refinance, property management prospects — verified and ready to contact.
+- CTA: Learn More →
+
+**Card 3 — Cold Calling Services**
+- Icon: phone/headset icon (gold)
+- Title: Cold Calling Services
+- Description: Our trained team handles your outreach — converting quality leads into real opportunities.
+- CTA: Learn More →
+
+Cards have hover lift effect with gold border glow.
+
+---
+
+### 4. Real Estate Lead Types Grid (Dark Background)
+
+**Section title:** Real Estate Lead Types  
+**Subtitle:** Hand-picked from public records. Verified by humans. Built for investors.
+
+**10 lead type cards in a 5×2 grid (responsive to 2×5 on mobile):**
+
+Each card contains:
+- Icon (relevant to lead type)
+- Lead type name
+- One-line value prop
+- "Learn More →" link
+
+| Lead Type | Icon | Value Prop |
+|---|---|---|
+| Probate Leads | ⚖️ | Heirs motivated to sell quickly. Often mortgage-free. |
+| Pre-Probate Leads | 🔍 | Early access before data goes public. Less competition. |
+| Divorce Leads | 💔 | Sellers forced to liquidate. Motivated to accept fast offers. |
+| Eviction Leads | 🏚️ | Tired landlords under pressure. Below-market deals. |
+| Inheritance Leads | 🏠 | Out-of-state heirs. No mortgage. Willing to negotiate. |
+| Judgment Leads | 📋 | Financially distressed. High motivation to sell below market. |
+| Tax Delinquent | 💰 | Owners facing liens. Ready to sell before auction. |
+| Fix & Flip | 🔨 | Undervalued properties. High ROI for experienced investors. |
+| Distressed Homeowners | 🆘 | Behind on mortgage. Urgent need to sell. |
+| Aged Homeowners | 👴 | High-equity homes. Owners open to downsizing. |
+
+Staggered animation — cards reveal one by one on scroll.
+
+---
+
+### 5. How It Works (Light Background)
+
+**Section title:** Our Process  
+**Subtitle:** Fresh data. Manual verification. Delivered in 2–4 days.
+
+Visual 5-step horizontal timeline (vertical on mobile):
+
+```
+Step 1          Step 2           Step 3            Step 4          Step 5
+Share Your  →  We Pull Fresh  →  Manual Review  →  Skip Tracing  →  Delivery
+Requirements   County Data       No Bots. No AI.   Phone + Email    Excel/CSV
+                                                    Appended         2–4 Days
+```
+
+Each step: numbered circle (gold), step title, short description below.
+Connecting arrows between steps.
+Subtle entrance animation — steps reveal left to right.
+
+---
+
+### 6. Why Choose Us (Dark Background)
+
+**Section title:** Why Professionals Trust Us
+
+Two-column layout — left: headline + paragraph, right: feature list
+
+**Left:**
+```
+We don't sell lists.
+We deliver intelligence.
+```
+Short paragraph about manual verification, official sources, no recycled data.
+
+**Right — 6 feature callouts (icon + bold label + description):**
+- 🚫 No AI, No Bots — Every record manually verified by our expert team
+- 📋 Official Sources Only — Data pulled directly from county websites and government records
+- ♻️ Never Recycled — Fresh work starts the moment you place your order
+- 📞 Skip Tracing Included — Phone numbers and emails appended to every lead
+- ⏱️ 2–4 Day Delivery — Clean Excel/CSV, ready to use immediately
+- 🎯 ROI Guidance — We advise on which lead types match your goals and budget
+
+---
+
+### 7. ROI Calculator (Light Background — Interactive)
+
+**Section title:** Calculate Your ROI  
+**Subtitle:** See what your investment in quality leads could return.
+
+**Interactive calculator with inputs:**
+```
+Number of Leads:     [slider: 100 – 5,000]
+Lead Type:           [dropdown: Probate / Divorce / Eviction / Tax Delinquent / Other]
+Your Close Rate (%): [slider: 1% – 20%]
+Avg. Deal Profit ($):[input: default $5,000]
+Cost per Lead ($):   [input: default $1.00]
+```
+
+**Output panel (updates live):**
+```
+Estimated Deals Closed:    [calculated]
+Total Investment:          $[calculated]
+Projected Revenue:         $[calculated]
+Your Estimated ROI:        [X]%
+```
+
+Style output panel with gold accent border, large numbers, dark background card.
+Add disclaimer: "Estimates are illustrative. Actual results vary."
+
+---
+
+### 8. Interactive US Coverage Map (Dark Background)
+
+**Section title:** Nationwide Coverage  
+**Subtitle:** We source leads from counties across all 48 contiguous states.
+
+SVG-based US map where:
+- All states are filled with a dark muted color by default
+- On hover: state highlights in gold with state name tooltip
+- Below map: "Coverage available in all 48 contiguous states. Contact us for specific county availability."
+
+Keep it visual and impressive — shows national reach.
+
+---
+
+### 9. Sample Lead Preview (Light Background)
+
+**Section title:** See What You're Getting  
+**Subtitle:** Real data. Verified. Delivered clean.
+
+Show a blurred/redacted sample table of what a delivered lead list looks like:
+
+```
+| Owner Name    | Property Address      | City       | State | Phone        | Email              | Lead Type |
+|---------------|-----------------------|------------|-------|--------------|--------------------|-----------|
+| J*** S******  | 1** Oak Street        | Columbus   | OH    | (614) ***-** | j***@***.com       | Probate   |
+| M*** W******  | 4** Elm Avenue        | Phoenix    | AZ    | (602) ***-** | m***@***.com       | Divorce   |
+| R*** J******  | 7** Pine Road         | Dallas     | TX    | (214) ***-** | r***@***.com       | Eviction  |
+```
+
+Above table: "SAMPLE — Data redacted for privacy"
+
+Below table: email capture form
+```
+[Enter your email address]  [Request Free Sample →]
+```
+
+---
+
+### 10. Testimonials (Dark Background)
+
+**Section title:** What Our Clients Say
+
+Three testimonial cards in a row:
+
+Each card:
+- Quote text
+- Star rating (5 stars, gold)
+- Client name, role, state
+- Deal outcome (italic, gold text)
+
+**Sample testimonials (use as placeholders):**
+
+Card 1:
+> "The probate list we got was incredibly accurate. Every record checked out. Closed our first deal within 3 weeks."
+> — Michael T., Real Estate Investor, Ohio
+> *Closed at 28% below market value*
+
+Card 2:
+> "We've tried 4 other lead vendors. [BRAND_NAME] is the only one that actually verifies. No disconnected numbers, no wrong addresses."
+> — Sarah K., Wholesaler, Texas
+> *12 deals closed in Q1*
+
+Card 3:
+> "The cold calling team converted 3 leads into signed contracts in the first month. ROI was insane."
+> — David R., Real Estate Agent, Florida
+> *$47,000 in commissions from one list*
+
+---
+
+### 11. FAQ Section (Light Background)
+
+**Section title:** Frequently Asked Questions
+
+Accordion-style, opens/closes on click. 8–10 questions:
+
+1. How fresh is your data?
+2. How do you verify leads?
+3. What format is the data delivered in?
+4. How long does delivery take?
+5. Do you offer refunds if data is inaccurate?
+6. What states do you cover?
+7. Can I request a custom lead type?
+8. What is skip tracing and is it included?
+9. What's the difference between probate and pre-probate leads?
+10. Do you offer bulk pricing?
+
+Each answer: 2–4 sentences, confident and direct.
+
+---
+
+### 12. Final CTA Banner (Dark Background)
+
+Full-width dark section with gold accent:
+
+```
+Ready to Find Your Next Deal?
+Stop wasting time on bad data. Get verified, motivated seller leads 
+delivered to your inbox in 2–4 days.
+
+[Order Now]    [Chat on WhatsApp]
+```
+
+---
+
+### 13. Footer (Darkest Background `#050507`)
+
+**Four columns:**
+
+Column 1 — Brand
+- Logo + brand name
+- Tagline: "Quality Over Quantity"
+- WhatsApp icons (two numbers as clickable links)
+- Email: [EMAIL_PLACEHOLDER]
+
+Column 2 — Real Estate Leads
+- Links to all 10 lead type pages
+
+Column 3 — Services
+- Real Estate Leads
+- Non Real Estate Leads
+- Cold Calling
+- Pricing
+- About Us
+
+Column 4 — Contact
+- Phone numbers (two placeholders)
+- Email
+- WhatsApp links
+- Available: 24×7
+
+**Bottom bar:**
+- © 2025 [BRAND_NAME]. All rights reserved.
+- Privacy Policy | Terms of Service
+
+---
+
+## WhatsApp Integration — Full Spec
+
+### Floating WhatsApp Button (Fixed, Bottom-Right)
+
+```jsx
+// Always visible on every page
+// Position: fixed, bottom: 24px, right: 24px
+// Two numbers with a toggle/popup on click
+
+On click → expand small popup with two options:
+  📱 WhatsApp Number 1: [WA_NUMBER_1_PLACEHOLDER]
+  📱 WhatsApp Number 2: [WA_NUMBER_2_PLACEHOLDER]
+
+Each number links to:
+https://wa.me/[NUMBER]?text=Hi,%20I'm%20interested%20in%20your%20lead%20services.%20Can%20you%20help%20me%3F
+```
+
+**Button style:**
+- Circle button, WhatsApp green (`#25D366`)
+- WhatsApp icon (white)
+- Subtle pulse animation ring around it
+- On hover: slight scale up
+- Tooltip: "Chat with us"
+
+### WhatsApp in Hero CTA Row
+- Button: WhatsApp green, icon + "Chat on WhatsApp"
+- Links to primary number with pre-filled message
+
+### WhatsApp in Footer
+- Two clickable WhatsApp icons with placeholder numbers
+
+### WhatsApp on Contact Page
+- Listed prominently as preferred contact method
+- Both numbers with click-to-chat links
+
+### Placeholder Variables
+```
+WA_NUMBER_1_PLACEHOLDER  →  Replace with actual number (format: countrycode+number, no spaces/dashes)
+WA_NUMBER_2_PLACEHOLDER  →  Replace with actual number
+```
+
+---
+
+## Individual Lead Type Pages — Template
+
+Each of the 10 lead type pages follows this structure:
+
+```
+1. Hero — Lead type name + bold headline + what it is
+2. Why Valuable — 3 bullet points with icons
+3. Who Should Buy This — Investors / Wholesalers / Agents / Cash Buyers
+4. Sample Data Preview — Blurred table
+5. Our Process — How we source this specific lead type
+6. Pricing CTA — "Get [Lead Type] Leads" button
+7. Related Lead Types — 3 card links to similar pages
+```
+
+---
+
+## Contact / Order Page
+
+Clean, premium form:
+
+```
+Full Name *
+Email Address *
+Phone Number *
+WhatsApp Number (optional)
+I am a: [Investor / Wholesaler / Real Estate Agent / Insurance Agent / Other]
+Lead Type Interested In: [dropdown — all lead types]
+Target States/Counties: [text area]
+Volume Required: [dropdown: 100–500 / 500–1000 / 1000–5000 / Custom]
+Additional Requirements: [text area]
+[Submit Order Request]
+```
+
+Below form:
+- "Or reach us directly on WhatsApp" with both numbers
+
+---
+
+## Pricing Page
+
+Three tiers displayed as cards:
+
+```
+Starter          Professional       Enterprise
+────────         ────────────       ──────────
+Up to 500        500–2,000          2,000+ leads
+leads            leads              Custom pricing
+
+$[X]             $[X]               Contact Us
+────────         ────────────       ──────────
+✓ 1 lead type   ✓ Up to 3 types    ✓ All lead types
+✓ Skip traced   ✓ Skip traced      ✓ Skip traced
+✓ CSV/Excel     ✓ CSV/Excel        ✓ Dedicated manager
+✓ 2–4 days      ✓ Priority 48hr    ✓ Custom turnaround
+                ✓ ROI consultation ✓ Cold calling add-on
+```
+
+All prices are placeholders — mark clearly with `[PRICE_PLACEHOLDER]`.
+
+---
+
+## About Page
+
+Sections:
+1. **Our Story** — Founded with a vision to serve US real estate professionals with reliable, results-driven data
+2. **Our Mission** — Quality over quantity. Manual verification. Official sources only.
+3. **Our Process** — How we source data (county websites, government records)
+4. **Why Manual Verification Matters** — The problem with AI-generated and recycled lists
+5. **Our Numbers** — Stats counters (same as homepage)
+6. **Meet The Team** — Placeholder team section
+
+---
+
+## Mobile Responsiveness
+
+All sections must be fully responsive:
+
+- Hero: stack headline and CTAs vertically on mobile
+- Stats bar: 2×2 grid on mobile
+- Services grid: single column on mobile
+- Lead types grid: 2×5 on mobile
+- How it works: vertical timeline on mobile
+- US map: simplified, touch-friendly on mobile
+- Testimonials: horizontal scroll carousel on mobile
+- Footer: single column stack on mobile
+- WhatsApp button: slightly smaller on mobile, always visible
+
+---
+
+## SEO Foundations
+
+- Each page has unique `<title>` and `<meta description>` tags
+- Semantic HTML throughout (`<h1>`, `<h2>`, `<section>`, `<article>`, `<nav>`)
+- Lead type pages optimised for search terms like "probate leads USA", "divorce leads real estate investors", "motivated seller leads" etc.
+- Image alt tags on all images/icons
+- Fast loading — lazy load images, optimize bundle
+
+---
+
+## Performance & Polish
+
+- Lazy loading for all images
+- Smooth scroll behavior (`scroll-behavior: smooth`)
+- Loading skeleton states for dynamic components (calculator, map)
+- 404 page — branded, with navigation back to home
+- Favicon placeholder — use brand initials
+- All placeholder text clearly marked with `[PLACEHOLDER]` for easy find-and-replace
+
+---
+
+## Placeholder Reference
+
+| Placeholder | Replace With |
+|---|---|
+| `[BRAND_NAME]` | Final brand name |
+| `[WA_NUMBER_1_PLACEHOLDER]` | WhatsApp number 1 (with country code) |
+| `[WA_NUMBER_2_PLACEHOLDER]` | WhatsApp number 2 (with country code) |
+| `[EMAIL_PLACEHOLDER]` | Business email address |
+| `[PHONE_1_PLACEHOLDER]` | Primary phone number |
+| `[PHONE_2_PLACEHOLDER]` | Secondary phone number |
+| `[PRICE_PLACEHOLDER]` | Actual pricing |
+| `[FOUNDER_NAME]` | Founder's name for About page |
+
+---
+
+## Final Instructions to Replit AI
+
+1. Build the complete multi-page React application with all routes
+2. Start with the Homepage — build every section top to bottom
+3. Then build the individual lead type pages using the template
+4. Then build remaining pages: About, FAQ, Pricing, Contact, Cold Calling, Non Real Estate Leads
+5. Use Framer Motion for all animations — no CSS-only animations
+6. Make the WhatsApp floating button appear on every single page
+7. Make the sticky header appear on every single page
+8. Use Google Fonts — import Playfair Display, DM Sans, JetBrains Mono
+9. Every section must look premium — no plain white cards on white backgrounds
+10. Test mobile responsiveness on every section before considering complete
+11. Do not use any placeholder images from external URLs — use CSS gradients or SVG illustrations instead
+12. All forms should show a success message on submission (no actual backend needed)
+13. The ROI calculator must update outputs in real-time as sliders move
+14. The US map must be interactive with hover states
+15. Code must be clean, commented, and organised by component

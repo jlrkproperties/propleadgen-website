@@ -1,0 +1,78 @@
+Make these two additions to the website:
+
+═══════════════════════════════════════════════
+1. SOCIAL MEDIA ICONS IN FOOTER
+═══════════════════════════════════════════════
+
+In the Footer component, add social media icons 
+under the brand description in column 1.
+
+Add these four social handles as icon links:
+
+- Facebook   → href="https://facebook.com/[FACEBOOK_PLACEHOLDER]"
+- Instagram  → href="https://instagram.com/[INSTAGRAM_PLACEHOLDER]"
+- LinkedIn   → href="https://linkedin.com/company/[LINKEDIN_PLACEHOLDER]"
+- X/Twitter  → href="https://twitter.com/[TWITTER_PLACEHOLDER]"
+
+Use react-icons for the icons:
+import { FaFacebook, FaInstagram, FaLinkedin, FaXTwitter } 
+from "react-icons/fa6"
+
+If react-icons is not installed run: npm install react-icons
+
+ICON STYLE:
+- Display in a horizontal row with 16px gap
+- Icon size: 20px
+- Default color: #6B7280 (muted gray)
+- On hover: color changes to #C8A96E (gold)
+- Smooth 200ms color transition on hover
+- All links open in new tab: target="_blank"
+- Add aria-label to each icon for accessibility
+
+Place the icons below the brand tagline 
+"Quality Over Quantity" and above the 
+WhatsApp contact links.
+
+═══════════════════════════════════════════════
+2. SCROLL TO TOP BUTTON
+═══════════════════════════════════════════════
+
+Create a "Scroll to Top" button that appears 
+on every page when the user scrolls down.
+
+BEHAVIOR:
+- Hidden when user is at the top (< 300px scrolled)
+- Appears smoothly when user scrolls past 300px
+- On click: smoothly scrolls back to top of page
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+- Fade in/out animation on show/hide
+
+POSITION:
+- Fixed position
+- Bottom: 24px
+- Right: 80px (sits to the LEFT of the WhatsApp 
+  floating button so they don't overlap)
+
+STYLE:
+- Circle button, 48px × 48px
+- Background: rgba(200, 169, 110, 0.15)
+- Border: 1px solid rgba(200, 169, 110, 0.40)
+- Icon: upward chevron or arrow ↑ in gold #C8A96E
+- On hover: background rgba(200, 169, 110, 0.30)
+- Border radius: 50%
+- Backdrop blur: 8px
+- Box shadow: 0 4px 16px rgba(0,0,0,0.3)
+
+Use react-icons:
+import { FaChevronUp } from "react-icons/fa"
+
+Add this as a global component that appears 
+on every page — place it in the Layout component 
+alongside the existing WhatsApp floating button.
+
+═══════════════════════════════════════════════
+3. DO NOT CHANGE
+═══════════════════════════════════════════════
+- WhatsApp floating button position or behavior
+- Any other section or page
+- Existing footer layout and links

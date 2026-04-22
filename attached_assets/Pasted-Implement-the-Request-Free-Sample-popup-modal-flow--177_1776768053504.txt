@@ -1,0 +1,118 @@
+Implement the "Request Free Sample" popup/modal flow.
+
+═══════════════════════════════════════════════
+1. CREATE THE MODAL COMPONENT
+═══════════════════════════════════════════════
+
+Create a new file: src/components/ui/SampleRequestModal.tsx
+
+The modal should:
+
+TRIGGER: Opens when "Request Free Sample" button is clicked
+OVERLAY: Dark semi-transparent backdrop rgba(0,0,0,0.75)
+         Clicking backdrop closes the modal
+
+MODAL CARD:
+- Background: #0F1117
+- Border: 1px solid rgba(200, 169, 110, 0.25)
+- Border radius: 16px
+- Padding: 40px
+- Max width: 480px
+- Centered on screen
+- Close × button top right in gold
+
+MODAL CONTENT:
+  Eyebrow (gold, small caps): FREE SAMPLE
+  
+  Title: See Our Data Before You Buy
+  (Playfair Display, white, 28px)
+  
+  Subtitle: 
+  "Get a real sample lead list delivered to your 
+  inbox — no strings attached."
+  (DM Sans, muted gray, 15px)
+
+  Form fields:
+  - Full Name * (text input)
+  - Email Address * (email input)
+  
+  Input style:
+  - Background: #1A1D2E
+  - Border: 1px solid rgba(200,169,110,0.20)
+  - Border radius: 8px
+  - Text color: #FFFFFF
+  - Placeholder color: #6B7280
+  - Padding: 12px 16px
+  - On focus: border color rgba(200,169,110,0.60)
+
+  Submit button:
+  - Full width
+  - Background: #C8A96E
+  - Text: "Send Me a Free Sample →"
+  - Dark text color: #0A0A0F
+  - Border radius: 8px
+  - Padding: 14px
+  - Font weight: 600
+
+  Below button (small muted text):
+  "We'll email your sample within a few hours. 
+   No spam. Unsubscribe anytime."
+
+SUCCESS STATE:
+After form submission show success message 
+inside the modal (replace form content):
+  
+  Large checkmark icon in gold ✓
+  
+  Title: "Sample Request Received!"
+  
+  Body: "We'll send your sample lead list to 
+  [their email] within a few hours."
+  
+  Button: "Close" → closes modal
+
+═══════════════════════════════════════════════
+2. WIRE UP THE BUTTON
+═══════════════════════════════════════════════
+
+In the Hero section:
+- "Request Free Sample" button should open 
+  this modal on click
+- Do NOT navigate to any page
+- Do NOT scroll anywhere
+
+═══════════════════════════════════════════════
+3. UPDATE HERO CTA STRATEGY
+═══════════════════════════════════════════════
+
+Update the three Hero CTAs as follows:
+
+Button 1 — "Order Now →"
+- Navigates to /contact page (order form)
+- Style: gold outlined button (keep existing)
+
+Button 2 — "Request Free Sample"  
+- Opens SampleRequestModal
+- Style: dark outlined button (keep existing)
+
+Button 3 — "Chat on WhatsApp"
+- Opens WhatsApp with pre-filled message (keep existing)
+- Style: WhatsApp green (keep existing)
+
+═══════════════════════════════════════════════
+4. UPDATE NAVBAR "GET STARTED" BUTTON
+═══════════════════════════════════════════════
+
+"Get Started" in the navbar:
+- Change label to "Order Now"
+- Navigates to /contact page
+- Style: keep existing gold button
+
+═══════════════════════════════════════════════
+5. DO NOT CHANGE
+═══════════════════════════════════════════════
+- Any other section on the page
+- The existing sample preview table on homepage
+- Contact form fields
+- WhatsApp integration
+- Any other page

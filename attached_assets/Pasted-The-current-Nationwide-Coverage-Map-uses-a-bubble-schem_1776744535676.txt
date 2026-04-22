@@ -1,0 +1,59 @@
+The current Nationwide Coverage Map uses a bubble/schematic layout 
+with state abbreviations in rounded boxes. Replace it entirely with 
+a proper geographic SVG choropleth map of the United States using 
+the react-simple-maps library.
+
+Requirements:
+
+1. LIBRARY
+Install and use react-simple-maps with d3-scale for the US map.
+Use the built-in US AlbersUsa projection which correctly positions 
+Alaska and Hawaii.
+
+2. VISUAL DESIGN
+- Map background: transparent (inherits dark section background #0A0A0F)
+- Default state fill: #1E2130 (dark muted)
+- Default state stroke: #2D3148 (subtle border between states)
+- Stroke width: 0.5px
+- On hover: fill changes to #C8A96E (gold accent)
+- Transition: smooth 200ms color transition on hover
+- Map container: rounded border, subtle dark card background #13151C, 
+  padding 32px
+
+3. TOOLTIP
+On hover over any state show a clean tooltip:
+- State full name (not abbreviation)
+- "Coverage Available" label below state name
+- Gold text color #C8A96E
+- Dark background tooltip card #0F1117
+- Positioned near cursor, never overflows viewport
+
+4. INTERACTION
+- All 48 contiguous states are hoverable and highlight gold
+- Alaska and Hawaii included via AlbersUsa projection insets
+- Cursor changes to pointer on hover over any state
+
+5. LEGEND
+Keep the existing legend below the map:
+- Dark swatch → "All 48 States — Hover to explore"
+- Gold swatch → "Active coverage"
+
+6. SECTION COPY
+Keep existing section copy exactly as is:
+- Eyebrow: COVERAGE
+- Title: Nationwide Coverage
+- Subtitle: We source leads from counties across all 48 contiguous states.
+- Footer text: Coverage available in all 48 contiguous states. 
+  Contact us for specific county availability.
+
+7. RESPONSIVE
+- On desktop: full width map, tall enough to see all states clearly
+- On tablet: scale down proportionally
+- On mobile: map scales to full width, minimum height 300px, 
+  touch-friendly hover states become tap states
+
+8. PERFORMANCE
+- Lazy load the map component (React.lazy + Suspense)
+- Show a simple loading skeleton while map loads
+
+Do not change anything else on the page. Only replace the map component.
