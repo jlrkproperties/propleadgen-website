@@ -18,7 +18,7 @@ export default function HeroSection() {
     <section
       className="relative min-h-screen flex items-start justify-center overflow-hidden bg-[#0A0A0F]"
       style={{
-        paddingTop: 80,
+        paddingTop: 80, minHeight: "100svh", display: "flex", flexDirection: "column", justifyContent: "center",
         backgroundImage: "url('/images/hero-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -146,7 +146,7 @@ export default function HeroSection() {
           <button
             type="button"
             onClick={() => setSampleOpen(true)}
-            className="hidden sm:flex font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-sm"
+            className="flex font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-sm"
             style={{
               border: "1px solid #C8A96E",
               color: "#C8A96E",
