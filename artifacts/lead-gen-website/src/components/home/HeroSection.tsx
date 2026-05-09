@@ -83,7 +83,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="hidden sm:block text-xs sm:text-sm uppercase tracking-[0.25em] text-[#C8A96E] mb-6 font-medium">>
+          <p className="hidden sm:block text-xs sm:text-sm uppercase tracking-[0.25em] text-[#C8A96E] mb-6 font-medium">
             Verified &middot; Fresh &middot; Results-Driven
           </p>
         </motion.div>
