@@ -18,7 +18,7 @@ export default function HeroSection() {
     <section
       className="relative min-h-screen flex items-start justify-center overflow-hidden bg-[#0A0A0F]"
       style={{
-        paddingTop: 160,
+        paddingTop: 80,
         backgroundImage: "url('/images/hero-bg.jpg')",
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -75,7 +75,7 @@ export default function HeroSection() {
       </div>
 
       {/* ── Hero content ───────────────────────────────────── */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-24">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8 sm:py-24">
 
         {/* Eyebrow */}
         <motion.div
@@ -83,7 +83,7 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-xs sm:text-sm uppercase tracking-[0.25em] text-[#C8A96E] mb-6 font-medium">
+          <p className="hidden sm:block text-xs sm:text-sm uppercase tracking-[0.25em] text-[#C8A96E] mb-6 font-medium">>
             Verified &middot; Fresh &middot; Results-Driven
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ export default function HeroSection() {
 
         {/* Subheadline */}
         <motion.p
-          className="text-base sm:text-lg text-[#F1F5F9] max-w-2xl mx-auto mb-10 leading-relaxed"
+          className="hidden sm:block text-base sm:text-lg text-[#F1F5F9] max-w-2xl mx-auto mb-10 leading-relaxed"
           style={{
             textShadow:
               "0 1px 16px rgba(0,0,0,0.95), 0 0 30px rgba(0,0,0,0.7)",
@@ -132,7 +132,7 @@ export default function HeroSection() {
         >
           <Link href="/contact">
             <button
-              className="flex items-center gap-2 font-bold px-7 py-3.5 rounded-xl transition-all duration-200 hover:shadow-xl text-sm"
+              className="flex w-full sm:w-auto items-center justify-center gap-2 font-bold px-7 py-3.5 rounded-xl transition-all duration-200 hover:shadow-xl text-sm"
               style={{
                 backgroundColor: "#C8A96E",
                 color: "#0A0A0F",
@@ -146,7 +146,7 @@ export default function HeroSection() {
           <button
             type="button"
             onClick={() => setSampleOpen(true)}
-            className="font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-sm"
+            className="hidden sm:flex font-semibold px-7 py-3.5 rounded-xl transition-all duration-200 text-sm"
             style={{
               border: "1px solid #C8A96E",
               color: "#C8A96E",
@@ -168,7 +168,7 @@ export default function HeroSection() {
 
         {/* Trust badges */}
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-4 sm:gap-8"
+          className="hidden sm:flex flex-wrap items-center justify-center gap-4 sm:gap-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.45 }}
