@@ -40,6 +40,7 @@ export default function HeroSection() {
             backfaceVisibility: "hidden",
             WebkitBackfaceVisibility: "hidden",
             transform: "translateZ(0)",
+            filter: "brightness(1.25) contrast(1.05)"
           }}
         >
           <source src="/city-aerial.mp4" type="video/mp4" />

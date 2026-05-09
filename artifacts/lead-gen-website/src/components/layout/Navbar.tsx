@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 
 const navLinks = [
-  { label: "Home", href: "/" },
   {
     label: "Services",
     dropdown: [
@@ -64,7 +63,7 @@ export default function Navbar() {
                   onMouseLeave={() => setDropdownOpen(false)}
                 >
                   <button
-                    className="flex items-center gap-1 text-sm text-[#9CA3AF] hover:text-white transition-colors"
+                    className="flex items-center gap-1 text-sm text-white hover:text-[#C8A96E] transition-colors"
                     data-testid={`nav-${link.label.toLowerCase()}`}
                   >
                     {link.label}
@@ -82,7 +81,7 @@ export default function Navbar() {
                         <div className="bg-[#13151C] border border-[#1E2130] rounded-xl overflow-hidden shadow-2xl">
                           {link.dropdown.map((item) => (
                             <Link key={item.href} href={item.href}>
-                              <span className="block px-4 py-3 text-sm text-[#9CA3AF] hover:text-white hover:bg-[#1E2130] transition-colors cursor-pointer">
+                              <span className="block px-4 py-3 text-sm text-white hover:text-[#C8A96E] hover:bg-[#1E2130] transition-colors cursor-pointer">
                                 {item.label}
                               </span>
                             </Link>
@@ -95,7 +94,7 @@ export default function Navbar() {
               ) : (
                 <Link key={link.href} href={link.href}>
                   <span
-                    className="text-sm text-[#9CA3AF] hover:text-white transition-colors cursor-pointer"
+                    className="text-sm text-white hover:text-[#C8A96E] transition-colors cursor-pointer"
                     data-testid={`nav-${link.label.toLowerCase()}`}
                   >
                     {link.label}
