@@ -74,7 +74,7 @@ export default function WhyChooseUs() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: i * 0.1 }}
-                  className="card-dark p-5"
+                  className="card-dark p-5 hover:border-[#C8A96E]/50 hover:bg-[#1a1d2e] hover:shadow-lg hover:shadow-[#C8A96E]/10 transition-all duration-300 cursor-default"
                   data-testid={`feature-${f.title.toLowerCase().replace(/\s+/g, "-")}`}
                 >
                   <div className="flex items-start gap-4">
