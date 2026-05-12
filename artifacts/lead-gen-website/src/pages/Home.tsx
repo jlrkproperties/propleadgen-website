@@ -1,10 +1,10 @@
 import HeroSection from "@/components/home/HeroSection";
 import StatsBar from "@/components/home/StatsBar";
+import ROICalculator from "@/components/home/ROICalculator";
 import ServicesGrid from "@/components/home/ServicesGrid";
 import LeadTypesGrid from "@/components/home/LeadTypesGrid";
 import HowItWorks from "@/components/home/HowItWorks";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
-import ROICalculator from "@/components/home/ROICalculator";
 import USMapSection from "@/components/home/USMapSection";
 import SampleLeadPreview from "@/components/home/SampleLeadPreview";
 import Testimonials from "@/components/home/Testimonials";
@@ -15,12 +15,12 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <ROICalculator />
       <StatsBar />
       <ServicesGrid />
       <LeadTypesGrid />
       <HowItWorks />
       <WhyChooseUs />
-      <ROICalculator />
       <USMapSection />
       <SampleLeadPreview />
       <Testimonials />
