@@ -45,7 +45,7 @@ export default function WhyChooseUs() {
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
           >
-            <p className="text-xs uppercase tracking-widest text-[#C8A96E] mb-4 font-mono-data">Why Us</p>
+            <p className="text-xs uppercase tracking-widest text-[#C8A96E] mb-4 font-mono-data"> - Why Us</p>
             
             <p className="text-3xl font-display font-bold text-white mb-4 leading-tight">
               We don't sell lists.<br />
