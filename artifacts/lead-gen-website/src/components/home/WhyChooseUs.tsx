@@ -47,9 +47,6 @@ export default function WhyChooseUs() {
           >
             <p className="text-xs uppercase tracking-widest text-[#C8A96E] mb-4 font-mono-data">Why Us</p>
             <h2 className="section-title text-white mb-6">
-              Why Professionals{" "}
-              <span className="text-[#C8A96E]">Trust Us</span>
-            </h2>
             <p className="text-3xl font-display font-bold text-white mb-4 leading-tight">
               We don't sell lists.<br />
               <span className="text-[#C8A96E]">We deliver intelligence.</span>
